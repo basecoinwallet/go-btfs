@@ -46,7 +46,14 @@ const (
 )
 
 func loadConnPeers(host host.Host, cfg *config.Config) map[peer.ID]bool {
-	peerIds := host.Peerstore().PeersWithAddrs()
+	// peerIds := host.Peerstore().PeersWithAddrs()
+	peerIds := []peer.ID{
+		"16Uiu2HAkwtBHyb8kWdAhQ7XZFaYkRhB4fBYF2LoRTAPwVe2aAe9h",
+		"16Uiu2HAmKsMZH6RNi6rWCpfcnzek2iPjcNcvrcgjL7pERFCpr1AV",
+		"16Uiu2HAm3kf3wDUdoGkkF8L16fxCt6Ren77X2dRtWyt8Qkw8NVuy",
+		"16Uiu2HAmEBQwNrXTJRLwrHo35wHNaLYDRUTwoA4vTSErDPU3UfZ5",
+		"16Uiu2HAmEBQwNrXTJRLwrHo35wHNaLYDRUTwoA4vTSErDPU3UfZ5",
+	}
 
 	bootstrap, err := cfg.BootstrapPeers()
 	if err != nil {
